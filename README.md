@@ -68,6 +68,7 @@ Your vault updates ONLY when choosing Save and Exit.
 5. Why I Built This
 
 This secure encrypted vault helped me learn about:
+
 Hashing
 
 Salts

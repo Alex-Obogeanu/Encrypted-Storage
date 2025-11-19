@@ -16,12 +16,14 @@ Automatic detection of first-time setup vs existing vault
 
 How It Works:
 
+
 1. Master Key Creation
 On first launch, the program asks you to create a master key that must meet these rules:
 At least 10 characters
 At least 1 uppercase, 1 lowercase, 1 digit, 1 special character
 No spaces
 The master key is never stored. Instead, a PBKDF2-HMAC hash is generated and saved.
+
 
 2. Encryption Setup
 
@@ -33,26 +35,35 @@ Hashes the master key with PBKDF2-HMAC (SHA-512 × 10,000 iterations)
 Saves the hash in vault_key
 Uses the first 32 bytes of the hash as the Fernet encryption key
 
+
 3. Encrypted Vault
 
 The vault itself is a Python dictionary, encrypted with Fernet
 Only the correct master key can decrypt it.
+
 
 4. Usage
    
 First Run:
 
 No vault exists.
+
 Creating vault...
+
 Welcome To An Encryption Service.
+
 You will be prompted to create a master key.
+
 Unlocking the Vault
 
 On later runs:
 
 Vault found!
+
 Enter master key to unlock:
+
 If the hash matches, the vault decrypts and loads.
+
 
 Menu Options
 
@@ -64,6 +75,7 @@ Once unlocked, you can:
 4. Save and Exit
 
 Your vault updates ONLY when choosing Save and Exit.
+
 
 5. Why I Built This
 

@@ -69,8 +69,13 @@ Your vault updates ONLY when choosing Save and Exit.
 
 This secure encrypted vault helped me learn about:
 Hashing
+
 Salts
+
 Encryption
+
 Secure storage
+
 User input validation
+
 Python file handling
